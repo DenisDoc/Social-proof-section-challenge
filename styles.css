@@ -257,7 +257,6 @@ margin-bottom:30px;
     padding: 15px 30px;
     width: 29rem;
     gap:1rem;
-    transition: margin-right 3s;
   }
   .rated.one{
     margin: 0px 6rem 10px 0px;
@@ -270,7 +269,6 @@ margin-bottom:30px;
   }
   .card{
     margin:1rem;
-    transition: margin-top 3s;
   }
   .card.midle{
     margin-top: 3rem;
@@ -282,14 +280,23 @@ margin-bottom:30px;
   .card.left{
     margin-left: 0px;
   }
-  .number-users:hover{
+    /*-----------
+  -Animations-
+  -----------*/
+  .card:hover,
+.rated:hover{
+  transform: scale(1.02);
+  transition:.5s;
+}
+.number-users:hover{
     color:rgba(242, 150, 67, 1);
     transition: ease-out .6s;
   }
-  .card:hover,
-  .rated:hover{
-    transform: scale(1.02);
-    transition:.5s;
-    animation-iteration-count:100;
+
+  .rated{
+    transition: margin-right 3s;
+  }
+  .card{
+    transition: margin-top 3s;
   }
 }
