@@ -1,0 +1,294 @@
+/* Fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Outfit:wght@200;400;600&family=Red+Hat+Display:wght@500&family=Spartan:wght@400;500;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+  }
+
+  /* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      -webkit-transition-duration: 0.01ms !important;
+              transition-duration: 0.01ms !important;
+      -webkit-animation-duration: 0.01ms !important;
+              animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+              animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /*Variables*/
+  :root{
+    --accent-1:hsl(333, 80%, 67%);
+    --accent-2:hsl(300, 43%, 22%);
+    
+    --neutral-1:hsl(0, 0%, 100%);
+    --neutral-2:hsl(300, 24%, 96%);
+    --neutral-3:hsl(303, 10%, 53%);
+    --font-family: 'Spartan', sans-serif; 
+  }
+ 
+  /*Helpers*/
+ .sr-only {
+    position: absolute;
+    top: auto;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+
+  /*---------------------------
+ ** Base
+-----------------------------*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--neutral-1);
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-1);
+    margin: 15px;
+    min-height: 100%;
+    font-family: var(--font-family), 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size:15px
+}
+footer{
+
+}
+/*---------------------------
+ ** Component Styles
+-----------------------------*/
+.top,
+.bottom,
+.hero,
+.reviews,
+.comments,
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.hero h2{
+    font-weight: 700;
+    font-size: 2rem;
+    color:var(--accent-2);
+    margin: 40px 40px  20px 40px;
+    line-height:92%;
+    letter-spacing: 0.1px;
+    max-width: 25rem;
+}
+.hero p{
+    font-weight: 500;
+    color:var(--neutral-3);
+    margin: auto auto 30px auto;
+    opacity: 0.9;
+    max-width: 25rem;
+}
+
+.reviews{
+margin-bottom:30px;
+}
+.rated{
+    margin: 10px 10px;
+    background-color: var(--neutral-2);
+    padding: .5rem 3rem;
+    line-height: 25px;
+    width: 100%;
+    border-radius: 10px;
+}
+.rated-text{
+    color:rgba(81, 31, 80, .9);
+    font-weight: 700;
+    font-size: .9em;
+}
+.stars{
+    color: rgba(242, 150, 67, 1);
+    font-size: 1.5rem;
+}
+
+.card{
+    background-color: var(--accent-2);
+    color: var(--neutral-2);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin:.5rem;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 25rem;
+    height: 18rem;
+    justify-content: space-around;
+    max-height: 20rem;
+}
+.colton,
+.irene,
+.anne{
+    width: 100%;
+    
+}
+.profile-pic{
+    border-radius: 50%;
+    width: 3rem;
+    float: left;
+    margin-right: 20px;
+}
+.name{
+    font-weight:700;
+    font-size: 14px;
+}
+.buyer{
+    color:var(--accent-1);
+    font-size: 13px;
+}
+.feedback{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--neutral-2);
+    opacity: .9;
+}
+ @media screen and (min-width:1100px){
+   body{
+     margin:auto;
+   }
+  .top,
+  .comments {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     height: auto;
+   }
+  .top {
+     justify-content:space-between;
+     width: 100%;
+     
+   }
+  .hero{
+     justify-content: left;
+     width: auto;
+     height: auto;
+     align-items: initial;
+   }
+  .hero h2{
+    font-weight: 700;
+    font-size:400%;
+    margin: 0px 0px 20px 8px ;
+    color:var(--accent-2);
+    letter-spacing: 0.1px;
+    max-width: 32rem;
+    text-align: left;
+    line-height: 95%;
+}
+  .hero p{
+    font-weight: 500;
+    color:var(--neutral-3);
+    margin:0px 0px 50px 8px;
+    opacity: 0.9;
+    max-width: 32rem;
+    text-align: left;
+    width: inherit;
+    height: inherit;
+    font-size: 1rem;
+}
+  .reviews{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    width: initial;
+    gap:1.5rem;
+  }
+  .rated{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 15px 30px;
+    width: 29rem;
+    gap:1rem;
+    transition: margin-right 3s;
+  }
+  .rated.one{
+    margin: 0px 6rem 10px 0px;
+  }
+  .rated.two{
+    margin: 0px 3rem 10px 0px;
+  }
+  .rated.three{
+    margin:0px;
+  }
+  .card{
+    margin:1rem;
+    transition: margin-top 3s;
+  }
+  .card.midle{
+    margin-top: 3rem;
+  }
+  .card.right{
+    margin-top: 6rem;
+    margin-right: 0px;
+  }
+  .card.left{
+    margin-left: 0px;
+  }
+  .number-users:hover{
+    color:rgba(242, 150, 67, 1);
+    transition: ease-out .6s;
+  }
+  .card:hover,
+  .rated:hover{
+    transform: scale(1.02);
+    transition:.5s;
+  }
+}
