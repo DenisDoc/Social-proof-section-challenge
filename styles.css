@@ -290,5 +290,6 @@ margin-bottom:30px;
   .rated:hover{
     transform: scale(1.02);
     transition:.5s;
+    animation-iteration-count:100;
   }
 }
