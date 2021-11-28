@@ -93,13 +93,15 @@ body{
     flex-direction: column;
     background-color: var(--neutral-1);
     text-align: center;
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, right bottom;
+    background-repeat: no-repeat;
 }
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--neutral-1);
     margin: 15px;
     min-height: 100%;
     font-family: var(--font-family), 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
@@ -200,9 +202,14 @@ margin-bottom:30px;
     color: var(--neutral-2);
     opacity: .9;
 }
- @media screen and (min-width:1100px){
+ @media screen and (min-width:760px){
    body{
      margin:auto;
+     min-width: 100%;
+     min-height: 100vh;
+     background-image: url(./images/bg-pattern-top-desktop.svg),url(./images/bg-pattern-bottom-desktop.svg);
+     background-position:top left, right bottom;
+     background-repeat: no-repeat;
    }
   .top,
   .comments {
@@ -221,10 +228,12 @@ margin-bottom:30px;
      width: auto;
      height: auto;
      align-items: initial;
+     max-width: 100%;
+     min-width: 32rem;
    }
   .hero h2{
     font-weight: 700;
-    font-size:400%;
+    font-size:350%;
     margin: 0px 0px 20px 8px ;
     color:var(--accent-2);
     letter-spacing: 0.1px;
@@ -245,28 +254,19 @@ margin-bottom:30px;
 }
   .reviews{
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items: flex-end;
     width: initial;
-    gap:1.5rem;
+    width:90%;
   }
   .rated{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     padding: 15px 30px;
-    width: 29rem;
-    gap:1rem;
+    width: 90%;
   }
-  .rated.one{
-    margin: 0px 6rem 10px 0px;
-  }
-  .rated.two{
-    margin: 0px 3rem 10px 0px;
-  }
-  .rated.three{
-    margin:0px;
-  }
+
   .card{
     margin:1rem;
   }
@@ -299,4 +299,32 @@ margin-bottom:30px;
   .card{
     transition: margin-top 3s;
   }
+}
+@media  screen and (min-width:1100px) {
+  .reviews{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    width: initial;
+    gap:1.5rem;
+    width: 100%;
+  }
+  .rated{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 15px 30px;
+    width: 65%;
+    gap:1.5rem;
+  }
+  .rated.one{
+    margin: 0px 6rem 10px 0px;
+  }
+  .rated.two{
+    margin: 0px 3rem 10px 0px;
+  }
+  .rated.three{
+    margin:0px;
+  }
+  
 }
